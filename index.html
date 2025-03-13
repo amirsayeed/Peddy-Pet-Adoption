@@ -60,8 +60,18 @@
         <section id="category-container" class="flex justify-center py-10 gap-5">
 
         </section>
+        <section>
+            <div id="loader" class="text-center hidden">
+                <span class="loading loading-spinner loading-xs"></span>
+                <span class="loading loading-spinner loading-sm"></span>
+                <span class="loading loading-spinner loading-md"></span>
+                <span class="loading loading-spinner loading-lg"></span>
+                <span class="loading loading-spinner loading-xl"></span>
+            </div>
+        </section>
         <section class="mt-8 flex justify-center">
-            <div id="pet-container"></div>
+            <div id="pet-container" class="grid grid-cols-3"></div>
+
         </section>
     </main>
     <script src="./scripts/index.js"></script>

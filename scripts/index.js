@@ -19,6 +19,7 @@ const showCategory = (categories) => {
 }
 
 const loadPetsByCatgory = async (categoryName) => {
+    showElement("loader");
     const response = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${categoryName}`)
     const data = await response.json();
     showPetsByCategory(data.data);
@@ -26,10 +27,24 @@ const loadPetsByCatgory = async (categoryName) => {
 
 const showPetsByCategory = (pets) => {
     const petContainer = document.getElementById("pet-container");
-    petContainer.innerHTML = ''
+    petContainer.innerHTML = '';
+
+    if (pets.length == 0) {
+        hideElement("loader");
+        petContainer.innerHTML = `
+        <div class = "col-span-full flex flex-col justify-center items-center py-10 gap-2">
+            <img class = "w-[200px]" src = "./images/error.webp" alt = "">
+            <h2 class = "text-xl text-center font-semibold"> No Information Available </h2> 
+            <p class = "text-center max-w-2xl"> It is a long established fact that a reader will be distracted by the
+        readable
+        content of a page when looking at
+        its layout.The point of using Lorem Ipsum is that it has a.</p> 
+        </div>
+        `
+    }
     pets.forEach((pet) => {
         console.log(pet)
-        const div = document.createElement("div");
+        const div = document.createElement("div");;
         div.innerHTML =
             `
         <div class = "card bg-base-100 w-96 shadow-sm">
@@ -49,7 +64,16 @@ const showPetsByCategory = (pets) => {
         </div>
         `
         petContainer.appendChild(div)
+        hideElement("loader");
     })
+}
+
+const showElement = (id) => {
+    document.getElementById(id).style.display = "block"
+}
+
+const hideElement = (id) => {
+    document.getElementById(id).style.display = "none";
 }
 
 loadCategories();

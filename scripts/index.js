@@ -48,7 +48,7 @@ const showPetsByCategory = (pets) => {
         div.innerHTML =
             `
         <div class = "card bg-base-100 w-96 shadow-sm">
-            <figure>
+            <figure class="w-full h-[200px] object-cover">
             <img src = "${pet.
             image}
             " alt = "

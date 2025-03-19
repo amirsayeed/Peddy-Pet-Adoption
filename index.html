@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -28,14 +28,16 @@
                 <button class="btn p-3 bg-gray-200 rounded-full"><i class="fa-regular fa-user fa-lg"></i></button>
             </div>
         </div>
-        <div class="flex flex-col items-center justify-center py-10">
+        <div class="flex flex-col items-center justify-center py-10 gap-5">
             <div class="text-center space-y-5">
-                <p class="text-lg">Bringing Families Together <span><i class="fa-solid fa-fire fa-lg"></i></span></p>
+                <p class="text-lg font-medium">Bringing Families Together <span><i
+                            class="fa-solid fa-fire fa-lg"></i></span></p>
                 <h1 class="text-4xl font-bold">Your Path to Adoption <br> Starts Here</h1>
                 <p class="text-lg max-w-3xl">It is a long established fact that a reader will be distracted by the
                     readable content of a page when
                     looking at its
                     layout. The point of using Lorem Ipsum is that it has a.</p>
+                <button class="btn bg-[#0E7A81] text-white rounded-xl"><a href="#adopt">View More</a></button>
             </div>
             <div>
                 <img src="./images/pet.webp" alt="">
@@ -43,7 +45,7 @@
         </div>
     </header>
     <main>
-        <section class="max-w-7xl mx-auto">
+        <section id="adopt" class="max-w-7xl mx-auto">
             <div class="flex items-center justify-center flex-col space-y-3">
                 <h2 class="text-3xl font-semibold">Adopt Your Best Friend</h2>
                 <p class="text-lg text-center max-w-3xl">It is a long established fact that a reader will be distracted
@@ -52,8 +54,9 @@
                     of a page when
                     looking at its
                     layout. The point of using Lorem Ipsum is that it has a.</p>
+
             </div>
-            <div id="category-container" class="flex justify-center py-10 gap-5">
+            <div id="category-container" class="flex items-center justify-evenly py-10">
 
             </div>
 
@@ -67,13 +70,27 @@
                 <span class="loading loading-spinner loading-xl"></span>
             </div>
         </section>
-        <section class="mt-8 flex justify-center">
-            <div id="pet-container" class="grid grid-cols-3 gap-5"></div>
+        <section class="my-8 flex justify-center">
+            <div id="pet-container" class="grid grid-cols-3 gap-3"></div>
 
         </section>
+        <div>
+            <dialog id="pet_details" class="modal">
+                <div class="modal-box">
+                    <div id="details-container">
+
+                    </div>
+                    <div class="modal-action flex items-center justify-center">
+                        <form method="dialog">
+                            <button class="btn btn-error">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </div>
     </main>
-    <!-- <script src="./scripts/index.js"></script> -->
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/Category.js"></script>
 </body>
 
 </html>

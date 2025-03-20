@@ -27,20 +27,20 @@ const showPetsByCategory = (pets) => {
         const div = document.createElement("div");;
         div.innerHTML =
             `
-        <div class = "card card- bg-base-100 shadow-sm space-y-2 py-6">
-            <figure class="w-full h-[200px] object-cover rounded-lg">
-            <img src = "${pet.image}" alt = "Shoes" />
+        <div class = "card card- bg-base-100 shadow-sm space-y-2 px-3 py-6">
+            <figure class="w-[300px] h-[200px] object-cover rounded-lg">
+            <img src = "${pet?.image}" alt = "Shoes" />
             </figure>  
             <div class = "card-body">
-            <h2 class = "card-title text-xl font-bold"> ${pet.pet_name}</h2>
+            <h2 class = "card-title text-xl font-bold"> ${pet?.pet_name}</h2>
             <p><i class = "fa-regular fa-rectangle-list"></i>
-            <span>Breed: ${pet.breed}</span></p>  
+            <span>Breed: ${pet?.breed ? pet.breed :"not available"}</span></p>  
             <p><i class = "fa-regular fa-calendar"></i>
-            <span>Birth: ${pet.date_of_birth}</span></p>
+            <span>Birth: ${pet?.date_of_birth ? pet.date_of_birth : "not available"}</span></p>
             <p><i class="fa-solid fa-mercury"></i>
-            <span>Gender: ${pet.gender}</span></p>
+            <span>Gender: ${pet?.gender ? pet.gender : "not available"}</span></p>
             <p><i class="fa-solid fa-dollar-sign"></i>
-            <span>Price: ${pet.price}</span></p>
+            <span>Price: ${pet?.price ? pet.price : "not available"}</span></p>
               
             <div class = "card-actions items-center justify-between mt-2">
             <button class = "btn"> <i class="fa-regular fa-thumbs-up"></i></button>
@@ -75,22 +75,22 @@ const displayPetDetails = (details) => {
             <div class="flex justify-around mt-2">
                 <div class="flex flex-col">
                     <p><i class = "fa-regular fa-rectangle-list"></i>
-                    <span>Breed: ${details.breed}</span></p>  
+                    <span>Breed: ${details?.breed ? details?.breed : "not available"}</span></p>  
                     <p><i class="fa-solid fa-mercury"></i>
-                    <span>Gender: ${details.gender}</span></p>
+                    <span>Gender: ${details?.gender ? details?.gender : "not available"}</span></p>
                     <p><i class="fa-solid fa-shield-virus"></i>
-                    <span>Vaccinated status: ${details.vaccinated_status}</span></p>
+                    <span>Vaccinated status: ${details?.vaccinated_status ? details?.vaccinated_status : "not available"}</span></p>
                 </div>
                 <div class ="flex flex-col">
                     <p><i class = "fa-regular fa-calendar"></i>
-                    <span>Birth: ${details.date_of_birth}</span></p>
+                    <span>Birth: ${details?.date_of_birth ? details?.date_of_birth : "not available"}</span></p>
                     <p><i class="fa-solid fa-dollar-sign"></i>
-                    <span>Price: ${details.price}</span></p>
+                    <span>Price: ${details?.price ? details?.price : "not available"}</span></p>
                 </div>
             </div>
             <div class="mt-5 space-y-2">
             <h2 class="text-xl font-semibold">Details Information</h2>
-            <p>${details.pet_details}</p>
+            <p>${details?.pet_details ? details?.pet_details : "not available"}</p>
             </div>
             
         </div>

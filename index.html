@@ -25,8 +25,10 @@
                 </ul>
             </div>
             <div class="navbar-end">
+
                 <button class="btn p-3 bg-gray-200 rounded-full"><i class="fa-regular fa-user fa-lg"></i></button>
             </div>
+
         </div>
         <div class="flex flex-col items-center justify-center py-10 gap-5">
             <div class="text-center space-y-5">
@@ -71,7 +73,7 @@
             </div>
         </section>
         <section class="my-8 flex justify-center">
-            <div id="pet-container" class="grid grid-cols-3 gap-3"></div>
+            <div id="pet-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
 
         </section>
         <div>
@@ -89,6 +91,29 @@
             </dialog>
         </div>
     </main>
+
+    <footer class="footer items-center justify-between sm:footer-horizontal bg-neutral text-neutral-content p-10 mt-20">
+        <nav>
+            <h6 class="footer-title">Services</h6>
+            <a class="link link-hover">Branding</a>
+            <a class="link link-hover">Design</a>
+            <a class="link link-hover">Marketing</a>
+            <a class="link link-hover">Advertisement</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Company</h6>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+        </nav>
+    </footer>
     <script src="./scripts/index.js"></script>
     <script src="./scripts/Category.js"></script>
 </body>

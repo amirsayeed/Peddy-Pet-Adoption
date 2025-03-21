@@ -27,7 +27,7 @@ const showPetsByCategory = (pets) => {
         const div = document.createElement("div");;
         div.innerHTML =
             `
-        <div class = "card card- bg-base-100 shadow-sm space-y-2 px-3 py-6">
+        <div class = "card bg-base-100 shadow-md space-y-2 px-3 py-6">
             <figure class="w-[300px] h-[200px] object-cover rounded-lg">
             <img src = "${pet?.image}" alt = "Shoes" />
             </figure>  
@@ -68,10 +68,10 @@ const displayPetDetails = (details) => {
     detailsContainer.innerHTML = `
     <div class="card bg-base-100 card-xl shadow-sm justify-center gap-5 py-5">
         <figure class="card-image w-full">
-            <img src="${details.image}" alt="Shoes">
+            <img src="${details?.image}" alt="Shoes">
         </figure>
         <div class="px-3">
-            <h2 class="text-2xl font-bold text-center">${details.pet_name}</h2>
+            <h2 class="text-2xl font-bold text-center">${details?.pet_name}</h2>
             <div class="flex justify-around mt-2">
                 <div class="flex flex-col">
                     <p><i class = "fa-regular fa-rectangle-list"></i>

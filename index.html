@@ -31,7 +31,7 @@
 
         </div>
         <div class="flex flex-col items-center justify-center py-10 gap-5">
-            <div class="text-center space-y-5">
+            <div class="text-center space-y-7">
                 <p class="text-lg font-medium">Bringing Families Together <span><i
                             class="fa-solid fa-fire fa-lg"></i></span></p>
                 <h1 class="text-4xl font-bold">Your Path to Adoption <br> Starts Here</h1>
@@ -72,9 +72,8 @@
                 <span class="loading loading-spinner loading-xl"></span>
             </div>
         </section>
-        <section class="my-8 flex justify-center">
+        <section class="my-8 flex justify-center gap-3">
             <div id="pet-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
-
         </section>
         <div>
             <dialog id="pet_details" class="modal">
@@ -94,24 +93,36 @@
 
     <footer class="footer items-center justify-between sm:footer-horizontal bg-neutral text-neutral-content p-10 mt-20">
         <nav>
-            <h6 class="footer-title">Services</h6>
-            <a class="link link-hover">Branding</a>
-            <a class="link link-hover">Design</a>
-            <a class="link link-hover">Marketing</a>
-            <a class="link link-hover">Advertisement</a>
+            <h6 class="text-xl flex gap-2">
+                <span><img src="./images/logo.webp" alt=""></span>
+                <span>Peddy</span>
+            </h6>
+            <div class="space-y-1 mt-2">
+                <p>Location: av. Washington 165, NY CA 54003</p>
+                <p>Phone: +31 85 964 47 25</p>
+                <p>Email: info@yourdomain.com</p>
+                <p>Openings hours: 9.00 AM - 5.00 PM</p>
+            </div>
+            <div class="flex gap-2 mt-2">
+                <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#"><i class="fab fa-linkedin fa-lg"></i></a>
+            </div>
         </nav>
         <nav>
-            <h6 class="footer-title">Company</h6>
-            <a class="link link-hover">About us</a>
+            <h6 class="footer-title">Useful Links</h6>
+            <a class="link link-hover">Home</a>
+            <a class="link link-hover">About Us</a>
+            <a class="link link-hover">Animals</a>
+            <a class="link link-hover">Foundation</a>
             <a class="link link-hover">Contact</a>
-            <a class="link link-hover">Jobs</a>
-            <a class="link link-hover">Press kit</a>
         </nav>
-        <nav>
-            <h6 class="footer-title">Legal</h6>
-            <a class="link link-hover">Terms of use</a>
-            <a class="link link-hover">Privacy policy</a>
-            <a class="link link-hover">Cookie policy</a>
+        <nav class="space-y-2">
+            <h6 class="footer-title">Drop a message</h6>
+            <input type="email" placeholder="Enter your rmail"
+                class="input bg-[#FFFFFF0D] rounded-xl text-[#FFFFFF99] input-bordered">
+            <button class="w-48 btn bg-[#0E7A81] rounded-xl">Subscribe</button>
         </nav>
     </footer>
     <script src="./scripts/index.js"></script>

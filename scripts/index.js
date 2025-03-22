@@ -5,7 +5,9 @@ const loadPetsByCatgory = async (categoryName) => {
     showPetsByCategory(data.data);
 }
 
+let sortedPets = [];
 const showPetsByCategory = (pets) => {
+    sortedPets = pets;
     const petContainer = document.getElementById("pet-container");
     petContainer.innerHTML = '';
 
@@ -105,3 +107,9 @@ const showElement = (id) => {
 const hideElement = (id) => {
     document.getElementById(id).style.display = "none";
 }
+
+const sortByPriceElement = document.getElementById("sort-price");
+sortByPriceElement.addEventListener("click", () => {
+    const sortedPrice = sortedPets.sort((a, b) => a.price - b.price);
+    showPetsByCategory(sortedPrice);
+})
